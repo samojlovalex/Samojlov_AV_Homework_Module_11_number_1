@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.samojlov_av_homework_module_11_number_1.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(), Removable {
 
@@ -99,5 +100,6 @@ class MainActivity : AppCompatActivity(), Removable {
 
     override fun remove(note: String) {
         adapter?.remove(note)
+        Snackbar.make(listViewLW, "Пользователь $note удален", Snackbar.LENGTH_LONG).show()
     }
 }
